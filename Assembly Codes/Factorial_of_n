@@ -1,0 +1,29 @@
+.data
+
+n: .word 5
+
+.text
+
+main:
+la t0,n
+lw a0,0(t0)
+jal ra,fact
+# Printing the value of the factorial
+addi a1,a0,0
+addi a0,x0,1
+ecall
+# Return 0
+addi a0,x0,10
+ecall
+
+# Defining the factorial function
+fact:
+addi t1,x0,1
+loop:
+beq a0,x0,getout
+mul t1,t1,a0
+addi a0,a0,-1
+jal x0,loop
+getout:
+mv a0,t1
+ret
