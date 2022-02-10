@@ -1,0 +1,62 @@
+# Program to calculate -n^2+n or -n*(n-1)
+# Defining the Array
+.data
+
+Array: .word -3,1,4,5,6,7
+B: .word 0,0,0,0,0,0
+.text
+
+main:
+
+# t0 = A[0], s0=B[0]
+la t0,Array
+la s0,B
+# t4 = n size of array
+addi t4,x0,6
+# t3 = i for loop variable
+addi t3,x0,0
+# t6 = sum variable
+addi t6,x0,0
+# loop start
+loop:
+# for(i=0;i<n;i++) 
+beq t3,t4,end
+lw a0,0(t0)
+jal ra,compute
+# storing the value of compute(A[i]) at B[i]
+sw s1,0(s0)
+# s2 = B[i]
+lw s2,0(s0)
+# Printing the value of B[i]
+mv a0,s2
+addi a1,a0,0
+addi a0,x0,1
+ecall
+# sum+=B[i]
+add t6,t6,s2
+# t0 = A[1]
+addi t0,t0,4
+addi s0,s0,4
+# i++
+addi t3,t3,1
+j loop
+end:
+# for printing the sum variable
+mv a0,t6
+# Printing the value of the sum
+addi a1,a0,0
+addi a0,x0,1
+ecall
+# Return 0
+addi a0,x0,10
+ecall
+
+
+# Defining the compute function computing -n*(n-1)
+compute:
+addi t1,a0,-1
+mul t2,a0,t1
+addi t5,x0,-1
+mul t2,t2,t5
+mv s1,t2
+ret
