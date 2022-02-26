@@ -1,0 +1,76 @@
+.data
+input: .string "Enter a string\n"
+check: .string "Entered Input is\n"
+length: .string "Enter input has length\n"
+out: .string "Output is\n"
+nl: .string "\n"
+
+.text
+
+takeinput:
+la a0, input
+addi a7,x0,4
+ecall
+addi a1,x0,100
+addi a7,x0,8
+ecall
+printinput: 
+add a4,x0,a0
+la a0,check
+addi a7,x0,4
+ecall
+add a0,x0,a4
+addi a7,x0,4
+ecall
+addi x2,x0,-1
+add x4,x0,a0
+loop:
+lb x3,0(x4)
+beq x3,x0,printlength
+addi x2,x2,1
+addi x4,x4,1
+jal loop
+printlength:
+mv a6,a0
+addi x4,x4,-2
+la a0,length
+addi a7,x0,4
+ecall
+mv a0,x2
+addi a7,x0,1
+ecall
+la a0,nl
+addi a7,x0,4
+ecall
+
+atoi:
+addi x1,x0,0
+add x3,x0,a6
+addi x5,x0,10
+addi x7,x0,47
+addi x8,x0,58
+l:
+beq x2,x0,output
+lb x4,0(x3)
+blt x4,x7,b
+blt x8,x4,b
+mul x1,x1,x5
+addi x4,x4,-48
+add x1,x1,x4
+b:
+addi x3,x3,1
+addi x2,x2,-1
+j l
+
+output:
+la a0,out
+addi a7,x0,4
+ecall
+mv a0,x1
+addi a7,x0,1
+ecall
+
+exit:
+addi a7,x0,10
+ecall
+
