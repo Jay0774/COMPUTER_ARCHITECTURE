@@ -38,9 +38,10 @@ loop:
 beq x2,x1,output
 addi a7,x0,5
 ecall
+
 # checking if the value of entered input is 0 
-# if a[i[ = 0 store it in data
-# if a[i[ = 0 store index i in i
+# if a[i] = 0 store it in data
+# if a[i] = 0 store index i in i
 beq a0,x0,notfound
 addi x3,x3,4
 sw a0,0(x3)
@@ -79,6 +80,7 @@ ecall
 addi x6,x6,4
 addi x1,x1,1
 j l1
+
 # for compresssed indices
 s:
 la a0,nl
