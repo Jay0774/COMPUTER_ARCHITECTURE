@@ -1,0 +1,112 @@
+root@c21295631886:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor3StageConfig/dhrystone.out
+
+Stats:
+
+CPI          : 1.473
+IPC          : 0.679
+Cycles       : 358201
+Instructions : 243186
+Bubbles      : 115016
+
+Instruction Breakdown:
+% Arithmetic  : 40.567 %
+% Ld/St       : 35.166 %
+% Branch/Jump : 23.719 %
+% Misc.       : 0.547 %
+
+root@c21295631886:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor3StageConfig/median.out
+
+Stats:
+
+CPI          : 1.694
+IPC          : 0.590
+Cycles       : 27863
+Instructions : 16449
+Bubbles      : 11415
+
+Instruction Breakdown:
+% Arithmetic  : 32.537 %
+% Ld/St       : 31.242 %
+% Branch/Jump : 35.370 %
+% Misc.       : 0.851 %
+
+root@c21295631886:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor3StageConfig/multiply.out
+
+Stats:
+
+CPI          : 1.843
+IPC          : 0.542
+Cycles       : 92053
+Instructions : 49935
+Bubbles      : 42119
+
+Instruction Breakdown:
+% Arithmetic  : 63.879 %
+% Ld/St       : 4.153 %
+% Branch/Jump : 31.615 %
+% Misc.       : 0.352 %
+
+root@c21295631886:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor3StageConfig/qsort.out
+
+Stats:
+
+CPI          : 1.617
+IPC          : 0.618
+Cycles       : 381371
+Instructions : 235836
+Bubbles      : 145536
+
+Instruction Breakdown:
+% Arithmetic  : 38.436 %
+% Ld/St       : 31.407 %
+% Branch/Jump : 29.834 %
+% Misc.       : 0.323 %
+
+root@c21295631886:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor3StageConfig/rsort.out
+
+Stats:
+
+CPI          : 1.135
+IPC          : 0.881
+Cycles       : 424873
+Instructions : 374409
+Bubbles      : 50465
+
+Instruction Breakdown:
+% Arithmetic  : 59.668 %
+% Ld/St       : 34.842 %
+% Branch/Jump : 4.335 %
+% Misc.       : 1.155 %
+
+root@c21295631886:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor3StageConfig/towers.out
+
+Stats:
+
+CPI          : 1.362
+IPC          : 0.734
+Cycles       : 25533
+Instructions : 18748
+Bubbles      : 6786
+
+Instruction Breakdown:
+% Arithmetic  : 42.671 %
+% Ld/St       : 41.892 %
+% Branch/Jump : 14.690 %
+% Misc.       : 0.747 %
+
+root@c21295631886:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor3StageConfig/vvadd.out
+
+Stats:
+
+CPI          : 1.516
+IPC          : 0.660
+Cycles       : 18411
+Instructions : 12143
+Bubbles      : 6269
+
+Instruction Breakdown:
+% Arithmetic  : 47.616 %
+% Ld/St       : 29.227 %
+% Branch/Jump : 22.004 %
+% Misc.       : 1.153 %
+

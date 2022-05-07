@@ -28,7 +28,7 @@ lb x1,0(a0)
 beq x1,x9,exit
 bne x1,x9,printinput
 
-# currenly ont prinint input as not required by program is required one statement need to be added
+# currenly ont print input as not required by program is required one statement need to be added
 printinput: 
 addi x2,x0,0
 la x4,data

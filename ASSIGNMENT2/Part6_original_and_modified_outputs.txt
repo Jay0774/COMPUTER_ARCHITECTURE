@@ -1,0 +1,285 @@
+root@551ea79e6215:~/chipyard/sims/verilator# make CONFIG=Sodor1StageConfig run-binary BINARY=/root/chipyard/${BMARKS}/dhrystone.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor1StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard//generators/riscv-sodor/riscv-bmarks/dhrystone.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/dhrystone.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/dhrystone.log)
+Microseconds for one run through Dhrystone: 449
+Dhrystones per Second:                      2227
+mcycle = 224524
+minstret = 224530
+[UART] UART0 is here (stdin/stdout).
+
+root@551ea79e6215:~/chipyard/sims/verilator# make CONFIG=Sodor1StageConfig run-binary BINARY=/root/chipyard/${BMARKS}/median.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor1StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard//generators/riscv-sodor/riscv-bmarks/median.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/median.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/median.log)
+mcycle = 4149
+minstret = 4155
+[UART] UART0 is here (stdin/stdout).
+
+root@551ea79e6215:~/chipyard/sims/verilator# make CONFIG=Sodor1StageConfig run-binary BINARY=/root/chipyard/${BMARKS}/multiply.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor1StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard//generators/riscv-sodor/riscv-bmarks/multiply.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/multiply.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/multiply.log)
+mcycle = 20896
+minstret = 20902
+[UART] UART0 is here (stdin/stdout).
+
+root@551ea79e6215:~/chipyard/sims/verilator# make CONFIG=Sodor1StageConfig run-binary BINARY=/root/chipyard/${BMARKS}/qsort.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor1StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard//generators/riscv-sodor/riscv-bmarks/qsort.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/qsort.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/qsort.log)
+mcycle = 123503
+minstret = 123509
+[UART] UART0 is here (stdin/stdout).
+
+root@551ea79e6215:~/chipyard/sims/verilator# make CONFIG=Sodor1StageConfig run-binary BINARY=/root/chipyard/${BMARKS}/rsort.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor1StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard//generators/riscv-sodor/riscv-bmarks/rsort.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/rsort.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/rsort.log)
+mcycle = 171128
+minstret = 171134
+[UART] UART0 is here (stdin/stdout).
+
+root@551ea79e6215:~/chipyard/sims/verilator# make CONFIG=Sodor1StageConfig run-binary BINARY=/root/chipyard/${BMARKS}/towers.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor1StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard//generators/riscv-sodor/riscv-bmarks/towers.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/towers.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/towers.log)
+mcycle = 6166
+minstret = 6172
+[UART] UART0 is here (stdin/stdout).
+
+root@551ea79e6215:~/chipyard/sims/verilator# make CONFIG=Sodor1StageConfig run-binary BINARY=/root/chipyard/${BMARKS}/vvadd.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor1StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard//generators/riscv-sodor/riscv-bmarks/vvadd.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/vvadd.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/vvadd.log)
+mcycle = 2412
+minstret = 2418
+[UART] UART0 is here (stdin/stdout).
+
+-------------------------------------------------------------------------------------------------
+Original Tracer.py
+-------------------------------------------------------------------------------------------------
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/dhrystone.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 245699
+Instructions : 245700
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 40.381 %
+% Ld/St       : 35.321 %
+% Branch/Jump : 23.757 %
+% Misc.       : 0.541 %
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/median.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 17180
+Instructions : 17181
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 31.843 %
+% Ld/St       : 32.158 %
+% Branch/Jump : 35.184 %
+% Misc.       : 0.815 %
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/multiply.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 50611
+Instructions : 50612
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 63.157 %
+% Ld/St       : 4.876 %
+% Branch/Jump : 31.619 %
+% Misc.       : 0.348 %
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/qsort.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 236654
+Instructions : 236655
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 38.379 %
+% Ld/St       : 31.473 %
+% Branch/Jump : 29.825 %
+% Misc.       : 0.322 %
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/rsort.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 375281
+Instructions : 375282
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 59.575 %
+% Ld/St       : 34.872 %
+% Branch/Jump : 4.401 %
+% Misc.       : 1.152 %
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/towers.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 19591
+Instructions : 19592
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 41.716 %
+% Ld/St       : 42.180 %
+% Branch/Jump : 15.389 %
+% Misc.       : 0.715 %
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/vvadd.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 12946
+Instructions : 12947
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 45.887 %
+% Ld/St       : 30.548 %
+% Branch/Jump : 22.484 %
+% Misc.       : 1.081 %
+
+-------------------------------------------------------------------------------------------------
+Modified tracer.py
+-------------------------------------------------------------------------------------------------
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/dhrystone.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 245699
+Instructions : 245700
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 39.523 %
+% Ld/St       : 35.321 %
+% Branch/Jump : 23.757 %
+% Misc.       : 1.399 %
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/median.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 17180
+Instructions : 17181
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 31.581 %
+% Ld/St       : 32.158 %
+% Branch/Jump : 35.184 %
+% Misc.       : 1.077 %
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/multiply.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 50611
+Instructions : 50612
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 63.044 %
+% Ld/St       : 4.876 %
+% Branch/Jump : 31.619 %
+% Misc.       : 0.460 %
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/rqsort.out
+usage: tracer.py [-h] [-u] [file]
+tracer.py: error: argument file: can't open 'output/chipyard.TestHarness.Sodor1StageConfig/rqsort.out': [Errno 2] No such file or directory: 'output/chipyard.TestHarness.Sodor1StageConfig/rqsort.out'
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/qsort.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 236654
+Instructions : 236655
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 38.349 %
+% Ld/St       : 31.473 %
+% Branch/Jump : 29.825 %
+% Misc.       : 0.352 %
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/rsort.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 375281
+Instructions : 375282
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 59.556 %
+% Ld/St       : 34.872 %
+% Branch/Jump : 4.401 %
+% Misc.       : 1.171 %
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/towers.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 19591
+Instructions : 19592
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 41.486 %
+% Ld/St       : 42.180 %
+% Branch/Jump : 15.389 %
+% Misc.       : 0.944 %
+
+root@551ea79e6215:~/chipyard/sims/verilator# ../../generators/riscv-sodor/scripts/tracer.py output/chipyard.TestHarness.Sodor1StageConfig/vvadd.out
+
+Stats:
+
+CPI          : 1.000
+IPC          : 1.000
+Cycles       : 12946
+Instructions : 12947
+Bubbles      : 0
+
+Instruction Breakdown:
+% Arithmetic  : 45.540 %
+% Ld/St       : 30.548 %
+% Branch/Jump : 22.484 %
+% Misc.       : 1.429 %

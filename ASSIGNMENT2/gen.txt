@@ -1,0 +1,944 @@
+chipyard/generators
+├── boom
+│   ├── docs
+│   │   ├── figures
+│   │   └── sections
+│   │       ├── bibliography
+│   │       ├── branch-prediction
+│   │       └── intro-overview
+│   ├── project
+│   ├── src
+│   │   ├── main
+│   │   │   ├── resources
+│   │   │   │   ├── csrc
+│   │   │   │   └── vsrc
+│   │   │   └── scala
+│   │   │       ├── common
+│   │   │       ├── exu
+│   │   │       │   ├── execution-units
+│   │   │       │   ├── issue-units
+│   │   │       │   ├── register-read
+│   │   │       │   └── rename
+│   │   │       ├── ifu
+│   │   │       │   └── bpd
+│   │   │       ├── lsu
+│   │   │       └── util
+│   │   └── test
+│   │       └── scala
+│   └── util
+│       ├── csmith
+│       │   └── sources
+│       └── memtracer
+├── chipyard
+│   └── src
+│       ├── main
+│       │   ├── resources
+│       │   │   ├── csrc
+│       │   │   └── vsrc
+│       │   └── scala
+│       │       ├── clocking
+│       │       ├── config
+│       │       │   └── fragments
+│       │       ├── example
+│       │       │   └── dsptools
+│       │       ├── stage
+│       │       │   └── phases
+│       │       └── unittest
+│       └── test
+│           └── scala
+│               └── clocking
+├── cva6
+│   └── src
+│       └── main
+│           ├── resources
+│           │   └── vsrc
+│           │       └── cva6
+│           │           ├── bootrom
+│           │           ├── ci
+│           │           ├── docs
+│           │           │   └── _static
+│           │           ├── fpga
+│           │           │   ├── constraints
+│           │           │   ├── scripts
+│           │           │   ├── src
+│           │           │   │   ├── apb_node
+│           │           │   │   │   └── src
+│           │           │   │   ├── apb_timer
+│           │           │   │   ├── apb_uart
+│           │           │   │   │   └── src
+│           │           │   │   ├── ariane-ethernet
+│           │           │   │   ├── axi2apb
+│           │           │   │   │   └── src
+│           │           │   │   ├── axi_slice
+│           │           │   │   │   └── src
+│           │           │   │   └── bootrom
+│           │           │   │       └── src
+│           │           │   └── xilinx
+│           │           │       ├── xlnx_axi_clock_converter
+│           │           │       │   └── tcl
+│           │           │       ├── xlnx_axi_dwidth_converter
+│           │           │       │   └── tcl
+│           │           │       ├── xlnx_axi_gpio
+│           │           │       │   └── tcl
+│           │           │       ├── xlnx_axi_quad_spi
+│           │           │       │   └── tcl
+│           │           │       ├── xlnx_clk_gen
+│           │           │       │   └── tcl
+│           │           │       ├── xlnx_ila
+│           │           │       │   └── tcl
+│           │           │       ├── xlnx_mig_7_ddr3
+│           │           │       │   └── tcl
+│           │           │       └── xlnx_protocol_checker
+│           │           │           └── tcl
+│           │           ├── include
+│           │           ├── openpiton
+│           │           │   └── bootrom
+│           │           │       ├── baremetal
+│           │           │       └── linux
+│           │           │           └── src
+│           │           ├── scripts
+│           │           ├── src
+│           │           │   ├── axi
+│           │           │   │   ├── include
+│           │           │   │   │   └── axi
+│           │           │   │   ├── scripts
+│           │           │   │   ├── src
+│           │           │   │   └── test
+│           │           │   ├── axi_mem_if
+│           │           │   │   └── src
+│           │           │   │       └── deprecated
+│           │           │   ├── axi_node
+│           │           │   │   └── src
+│           │           │   ├── axi_riscv_atomics
+│           │           │   │   ├── src
+│           │           │   │   └── test
+│           │           │   ├── cache_subsystem
+│           │           │   ├── clint
+│           │           │   ├── common_cells
+│           │           │   │   ├── formal
+│           │           │   │   ├── include
+│           │           │   │   │   └── common_cells
+│           │           │   │   ├── src
+│           │           │   │   │   └── deprecated
+│           │           │   │   └── test
+│           │           │   │       └── waves
+│           │           │   ├── fpga-support
+│           │           │   │   ├── behav
+│           │           │   │   │   ├── BramDwc
+│           │           │   │   │   │   ├── scripts
+│           │           │   │   │   │   └── vectors
+│           │           │   │   │   └── common
+│           │           │   │   │       ├── include
+│           │           │   │   │       └── modules
+│           │           │   │   ├── ci
+│           │           │   │   ├── rtl
+│           │           │   │   └── synth
+│           │           │   │       ├── BramDwc
+│           │           │   │       │   ├── deps
+│           │           │   │       │   ├── scripts -> ../common/scripts
+│           │           │   │       │   └── src
+│           │           │   │       └── common
+│           │           │   │           └── scripts
+│           │           │   ├── fpu
+│           │           │   │   ├── docs
+│           │           │   │   │   └── fig
+│           │           │   │   ├── src
+│           │           │   │   │   ├── common_cells
+│           │           │   │   │   │   ├── include
+│           │           │   │   │   │   │   └── common_cells
+│           │           │   │   │   │   ├── src
+│           │           │   │   │   │   │   └── deprecated
+│           │           │   │   │   │   └── test
+│           │           │   │   │   │       └── waves
+│           │           │   │   │   └── fpu_div_sqrt_mvp
+│           │           │   │   │       ├── document
+│           │           │   │   │       └── hdl
+│           │           │   │   └── tb
+│           │           │   │       └── flexfloat
+│           │           │   │           ├── examples
+│           │           │   │           ├── include
+│           │           │   │           ├── src
+│           │           │   │           └── test
+│           │           │   │               └── cmake
+│           │           │   ├── frontend
+│           │           │   ├── pmp
+│           │           │   │   ├── include
+│           │           │   │   ├── src
+│           │           │   │   └── tb
+│           │           │   ├── register_interface
+│           │           │   │   ├── docs
+│           │           │   │   └── src
+│           │           │   ├── riscv-dbg
+│           │           │   │   ├── debug_rom
+│           │           │   │   └── src
+│           │           │   ├── rv_plic
+│           │           │   │   ├── doc
+│           │           │   │   └── rtl
+│           │           │   ├── tech_cells_generic
+│           │           │   │   └── src
+│           │           │   └── util
+│           │           └── tb
+│           │               ├── common
+│           │               ├── common_verification
+│           │               │   └── src
+│           │               ├── dpi
+│           │               ├── dromajo
+│           │               │   ├── doc
+│           │               │   ├── run
+│           │               │   │   └── checkpoints
+│           │               │   │       └── qsort
+│           │               │   └── src
+│           │               ├── riscv-isa-sim
+│           │               │   ├── debug_rom
+│           │               │   ├── dummy_rocc
+│           │               │   ├── riscv
+│           │               │   │   └── insns
+│           │               │   ├── scripts
+│           │               │   ├── softfloat
+│           │               │   ├── spike_main
+│           │               │   └── tests
+│           │               ├── tb_cva6_icache
+│           │               │   └── hdl
+│           │               ├── tb_serdiv
+│           │               │   └── hdl
+│           │               ├── tb_wb_dcache
+│           │               │   └── hdl
+│           │               ├── tb_wt_dcache
+│           │               │   └── hdl
+│           │               └── wave
+│           └── scala
+├── fft-generator
+│   └── src
+│       └── main
+│           └── scala
+├── firechip
+│   └── src
+│       ├── main
+│       │   └── scala
+│       └── test
+│           └── scala
+├── gemmini
+│   ├── img
+│   ├── project
+│   ├── scripts
+│   ├── software
+│   │   ├── gemmini-ort
+│   │   ├── gemmini-rocc-tests
+│   │   │   ├── bareMetalC
+│   │   │   ├── imagenet
+│   │   │   ├── include
+│   │   │   ├── mlps
+│   │   │   ├── patches
+│   │   │   ├── riscv-tests
+│   │   │   │   ├── benchmarks
+│   │   │   │   │   ├── common
+│   │   │   │   │   ├── dhrystone
+│   │   │   │   │   ├── median
+│   │   │   │   │   ├── mm
+│   │   │   │   │   ├── mt-matmul
+│   │   │   │   │   ├── mt-vvadd
+│   │   │   │   │   ├── multiply
+│   │   │   │   │   ├── pmp
+│   │   │   │   │   ├── qsort
+│   │   │   │   │   ├── rsort
+│   │   │   │   │   ├── spmv
+│   │   │   │   │   ├── towers
+│   │   │   │   │   └── vvadd
+│   │   │   │   ├── debug
+│   │   │   │   │   ├── programs
+│   │   │   │   │   └── targets
+│   │   │   │   │       ├── RISC-V
+│   │   │   │   │       └── SiFive
+│   │   │   │   │           └── Freedom
+│   │   │   │   ├── env
+│   │   │   │   │   ├── p
+│   │   │   │   │   ├── pm
+│   │   │   │   │   ├── pt
+│   │   │   │   │   └── v
+│   │   │   │   ├── isa
+│   │   │   │   │   ├── macros
+│   │   │   │   │   │   └── scalar
+│   │   │   │   │   ├── rv32mi
+│   │   │   │   │   ├── rv32si
+│   │   │   │   │   ├── rv32ua
+│   │   │   │   │   ├── rv32uc
+│   │   │   │   │   ├── rv32ud
+│   │   │   │   │   ├── rv32uf
+│   │   │   │   │   ├── rv32ui
+│   │   │   │   │   ├── rv32um
+│   │   │   │   │   ├── rv64mi
+│   │   │   │   │   ├── rv64si
+│   │   │   │   │   ├── rv64ua
+│   │   │   │   │   ├── rv64uc
+│   │   │   │   │   ├── rv64ud
+│   │   │   │   │   ├── rv64uf
+│   │   │   │   │   ├── rv64ui
+│   │   │   │   │   └── rv64um
+│   │   │   │   └── mt
+│   │   │   └── rocc-software
+│   │   │       └── src
+│   │   ├── onnxruntime-riscv
+│   │   └── overlay
+│   │       └── root
+│   └── src
+│       ├── main
+│       │   └── scala
+│       │       └── gemmini
+│       └── test
+│           └── scala
+│               └── gemmini
+├── hwacha
+│   └── src
+│       └── main
+│           └── scala
+├── ibex
+│   └── src
+│       └── main
+│           ├── resources
+│           │   └── vsrc
+│           │       └── ibex
+│           │           ├── ci
+│           │           ├── doc
+│           │           │   ├── 01_overview
+│           │           │   ├── 02_user
+│           │           │   ├── 03_reference
+│           │           │   │   └── images
+│           │           │   ├── 04_developer
+│           │           │   └── _static
+│           │           ├── dv
+│           │           │   ├── cs_registers
+│           │           │   │   ├── env
+│           │           │   │   ├── lint
+│           │           │   │   ├── model
+│           │           │   │   ├── reg_driver
+│           │           │   │   ├── rst_driver
+│           │           │   │   └── tb
+│           │           │   ├── riscv_compliance
+│           │           │   │   ├── lint
+│           │           │   │   └── rtl
+│           │           │   ├── uvm
+│           │           │   │   ├── bus_params_pkg
+│           │           │   │   ├── core_ibex
+│           │           │   │   │   ├── common
+│           │           │   │   │   │   ├── ibex_mem_intf_agent
+│           │           │   │   │   │   ├── irq_agent
+│           │           │   │   │   │   └── prim
+│           │           │   │   │   ├── env
+│           │           │   │   │   ├── fcov
+│           │           │   │   │   ├── riscv_dv_extension
+│           │           │   │   │   ├── tb
+│           │           │   │   │   ├── tests
+│           │           │   │   │   └── yaml
+│           │           │   │   └── icache
+│           │           │   │       ├── data
+│           │           │   │       ├── doc
+│           │           │   │       └── dv
+│           │           │   │           ├── env
+│           │           │   │           │   └── seq_lib
+│           │           │   │           ├── ibex_icache_core_agent
+│           │           │   │           │   └── seq_lib
+│           │           │   │           ├── ibex_icache_ecc_agent
+│           │           │   │           │   └── seq_lib
+│           │           │   │           ├── ibex_icache_mem_agent
+│           │           │   │           │   └── seq_lib
+│           │           │   │           ├── prim_badbit
+│           │           │   │           ├── tb
+│           │           │   │           └── tests
+│           │           │   └── verilator
+│           │           │       └── pcount
+│           │           │           └── cpp
+│           │           ├── examples
+│           │           │   ├── fpga
+│           │           │   │   └── artya7
+│           │           │   │       ├── data
+│           │           │   │       ├── rtl
+│           │           │   │       └── util
+│           │           │   ├── simple_system
+│           │           │   │   ├── lint
+│           │           │   │   └── rtl
+│           │           │   └── sw
+│           │           │       ├── benchmarks
+│           │           │       │   └── coremark
+│           │           │       │       └── ibex
+│           │           │       ├── led
+│           │           │       └── simple_system
+│           │           │           ├── common
+│           │           │           └── hello_test
+│           │           ├── formal
+│           │           │   ├── data_ind_timing
+│           │           │   ├── icache
+│           │           │   └── riscv-formal
+│           │           ├── lint
+│           │           ├── rtl
+│           │           ├── shared
+│           │           │   └── rtl
+│           │           │       ├── fpga
+│           │           │       │   └── xilinx
+│           │           │       └── sim
+│           │           ├── syn
+│           │           │   ├── python
+│           │           │   ├── rtl
+│           │           │   └── tcl
+│           │           ├── util
+│           │           └── vendor
+│           │               ├── eembc_coremark
+│           │               │   ├── barebones
+│           │               │   ├── cygwin
+│           │               │   ├── docs
+│           │               │   │   └── html
+│           │               │   │       ├── files
+│           │               │   │       │   ├── PIC32
+│           │               │   │       │   ├── docs
+│           │               │   │       │   └── linux
+│           │               │   │       ├── index
+│           │               │   │       ├── javascript
+│           │               │   │       ├── search
+│           │               │   │       └── styles
+│           │               │   ├── freebsd
+│           │               │   ├── linux
+│           │               │   ├── linux64
+│           │               │   └── simple
+│           │               ├── google_riscv-dv
+│           │               │   ├── docs
+│           │               │   │   └── source
+│           │               │   ├── pygen
+│           │               │   │   ├── experimental
+│           │               │   │   └── pygen_src
+│           │               │   │       ├── isa
+│           │               │   │       ├── target
+│           │               │   │       │   ├── multi_harts
+│           │               │   │       │   ├── rv32i
+│           │               │   │       │   ├── rv32imafdc
+│           │               │   │       │   ├── rv32imc
+│           │               │   │       │   └── rv32imcb
+│           │               │   │       └── test
+│           │               │   ├── scripts
+│           │               │   │   └── deprecated
+│           │               │   ├── src
+│           │               │   │   └── isa
+│           │               │   │       └── custom
+│           │               │   ├── target
+│           │               │   │   ├── ml
+│           │               │   │   ├── multi_harts
+│           │               │   │   ├── rv32i
+│           │               │   │   ├── rv32imafdc
+│           │               │   │   ├── rv32imc
+│           │               │   │   ├── rv32imc_sv32
+│           │               │   │   ├── rv32imcb
+│           │               │   │   ├── rv64gc
+│           │               │   │   ├── rv64gcv
+│           │               │   │   ├── rv64imc
+│           │               │   │   └── rv64imcb
+│           │               │   ├── test
+│           │               │   ├── user_extension
+│           │               │   ├── verilog_style
+│           │               │   └── yaml
+│           │               ├── lowrisc_ip
+│           │               │   ├── dv
+│           │               │   │   ├── sv
+│           │               │   │   │   ├── common_ifs
+│           │               │   │   │   ├── csr_utils
+│           │               │   │   │   ├── dv_base_reg
+│           │               │   │   │   ├── dv_lib
+│           │               │   │   │   ├── dv_utils
+│           │               │   │   │   ├── mem_model
+│           │               │   │   │   └── str_utils
+│           │               │   │   ├── tools
+│           │               │   │   │   ├── dvsim
+│           │               │   │   │   │   ├── testplans
+│           │               │   │   │   │   └── tests
+│           │               │   │   │   ├── ralgen
+│           │               │   │   │   ├── riviera
+│           │               │   │   │   ├── vcs
+│           │               │   │   │   └── xcelium
+│           │               │   │   └── verilator
+│           │               │   │       ├── cpp
+│           │               │   │       └── simutil_verilator
+│           │               │   │           └── cpp
+│           │               │   ├── ip
+│           │               │   │   ├── prim
+│           │               │   │   │   ├── doc
+│           │               │   │   │   ├── dv
+│           │               │   │   │   │   ├── prim_lfsr
+│           │               │   │   │   │   │   ├── data
+│           │               │   │   │   │   │   └── tb
+│           │               │   │   │   │   ├── prim_present
+│           │               │   │   │   │   │   ├── crypto_dpi_present
+│           │               │   │   │   │   │   ├── data
+│           │               │   │   │   │   │   └── tb
+│           │               │   │   │   │   ├── prim_prince
+│           │               │   │   │   │   │   ├── crypto_dpi_prince
+│           │               │   │   │   │   │   ├── data
+│           │               │   │   │   │   │   └── tb
+│           │               │   │   │   │   ├── prim_ram_scr
+│           │               │   │   │   │   │   └── cpp
+│           │               │   │   │   │   └── prim_secded
+│           │               │   │   │   ├── fpv
+│           │               │   │   │   │   ├── tb
+│           │               │   │   │   │   └── vip
+│           │               │   │   │   ├── lint
+│           │               │   │   │   ├── pre_dv
+│           │               │   │   │   │   └── prim_sync_reqack
+│           │               │   │   │   │       ├── cpp
+│           │               │   │   │   │       └── rtl
+│           │               │   │   │   ├── rtl
+│           │               │   │   │   └── util
+│           │               │   │   │       ├── primgen
+│           │               │   │   │       └── vendor
+│           │               │   │   │           └── google_verible_verilog_syntax_py
+│           │               │   │   ├── prim_generic
+│           │               │   │   │   ├── lint
+│           │               │   │   │   └── rtl
+│           │               │   │   └── prim_xilinx
+│           │               │   │       ├── lint
+│           │               │   │       └── rtl
+│           │               │   ├── lint
+│           │               │   │   ├── doc
+│           │               │   │   └── tools
+│           │               │   │       ├── ascentlint
+│           │               │   │       ├── dvsim
+│           │               │   │       ├── veriblelint
+│           │               │   │       └── verilator
+│           │               │   └── util
+│           │               │       ├── dvsim
+│           │               │       │   ├── doc
+│           │               │       │   └── examples
+│           │               │       │       └── testplanner
+│           │               │       └── uvmdvgen
+│           │               └── patches
+│           │                   ├── eembc_coremark
+│           │                   ├── google_riscv-dv
+│           │                   └── lowrisc_ip
+│           │                       ├── dv_lib
+│           │                       ├── dv_tools
+│           │                       └── dv_utils
+│           └── scala
+├── icenet
+│   └── src
+│       └── main
+│           ├── resources
+│           │   ├── csrc
+│           │   └── vsrc
+│           └── scala
+├── nvdla
+│   ├── firesim-collateral
+│   └── src
+│       └── main
+│           ├── resources
+│           │   ├── hw
+│           │   │   ├── cmod
+│           │   │   │   ├── bdma
+│           │   │   │   │   └── gen
+│           │   │   │   ├── cacc
+│           │   │   │   │   └── gen
+│           │   │   │   ├── cbuf
+│           │   │   │   ├── cdma
+│           │   │   │   │   └── gen
+│           │   │   │   ├── cdp
+│           │   │   │   │   └── gen
+│           │   │   │   ├── cmac
+│           │   │   │   │   └── gen
+│           │   │   │   ├── csb_master
+│           │   │   │   │   └── gen
+│           │   │   │   ├── csc
+│           │   │   │   │   └── gen
+│           │   │   │   ├── cvif
+│           │   │   │   │   └── gen
+│           │   │   │   ├── glb
+│           │   │   │   │   └── gen
+│           │   │   │   ├── hls
+│           │   │   │   │   ├── cdma_libs
+│           │   │   │   │   ├── cdp_libs
+│           │   │   │   │   ├── csc_libs
+│           │   │   │   │   ├── include
+│           │   │   │   │   ├── sdp
+│           │   │   │   │   └── vlibs
+│           │   │   │   ├── hls_wrapper
+│           │   │   │   ├── include
+│           │   │   │   │   └── nvdla_ness_header
+│           │   │   │   ├── mcif
+│           │   │   │   │   └── gen
+│           │   │   │   ├── nvdla_clibs
+│           │   │   │   ├── nvdla_core
+│           │   │   │   ├── nvdla_payload
+│           │   │   │   ├── nvdla_top
+│           │   │   │   ├── pdp
+│           │   │   │   │   └── gen
+│           │   │   │   ├── rubik
+│           │   │   │   │   └── gen
+│           │   │   │   └── sdp
+│           │   │   │       └── gen
+│           │   │   ├── perf
+│           │   │   ├── spec
+│           │   │   │   ├── defs
+│           │   │   │   └── manual
+│           │   │   ├── syn
+│           │   │   │   ├── cons
+│           │   │   │   ├── scripts
+│           │   │   │   └── templates
+│           │   │   ├── tools
+│           │   │   │   ├── bin
+│           │   │   │   ├── etc
+│           │   │   │   └── make
+│           │   │   ├── verif
+│           │   │   │   ├── dut
+│           │   │   │   ├── sim
+│           │   │   │   ├── sim_vivado
+│           │   │   │   ├── synth_tb
+│           │   │   │   │   └── sim_scripts
+│           │   │   │   ├── traces
+│           │   │   │   │   └── traceplayer
+│           │   │   │   │       ├── cc_alexnet_conv5_relu5_int16_dtest_cvsram
+│           │   │   │   │       ├── conv_8x8_fc_int16
+│           │   │   │   │       ├── googlenet_conv2_3x3_int16
+│           │   │   │   │       ├── pdp_max_pooling_int16
+│           │   │   │   │       ├── sanity0
+│           │   │   │   │       ├── sanity1
+│           │   │   │   │       ├── sanity1_cvsram
+│           │   │   │   │       ├── sanity2
+│           │   │   │   │       ├── sanity2_cvsram
+│           │   │   │   │       ├── sanity3
+│           │   │   │   │       ├── sanity3_cvsram
+│           │   │   │   │       └── sdp_relu_int16
+│           │   │   │   └── verilator
+│           │   │   └── vmod
+│           │   │       ├── include
+│           │   │       ├── nvdla
+│           │   │       │   ├── apb2csb
+│           │   │       │   ├── bdma
+│           │   │       │   ├── cacc
+│           │   │       │   ├── car
+│           │   │       │   ├── cbuf
+│           │   │       │   ├── cdma
+│           │   │       │   ├── cdp
+│           │   │       │   ├── cmac
+│           │   │       │   ├── csb_master
+│           │   │       │   ├── csc
+│           │   │       │   ├── glb
+│           │   │       │   ├── nocif
+│           │   │       │   ├── pdp
+│           │   │       │   ├── retiming
+│           │   │       │   ├── rubik
+│           │   │       │   ├── sdp
+│           │   │       │   └── top
+│           │   │       ├── plugins
+│           │   │       ├── rams
+│           │   │       │   ├── model
+│           │   │       │   └── synth
+│           │   │       └── vlibs
+│           │   └── vsrc
+│           │       ├── defines
+│           │       ├── large
+│           │       │   └── vmod
+│           │       │       ├── fifos
+│           │       │       ├── include
+│           │       │       ├── nvdla
+│           │       │       │   ├── apb2csb
+│           │       │       │   ├── bdma
+│           │       │       │   ├── cacc
+│           │       │       │   ├── car
+│           │       │       │   ├── cbuf
+│           │       │       │   ├── cdma
+│           │       │       │   ├── cdp
+│           │       │       │   ├── cfgrom
+│           │       │       │   ├── cmac
+│           │       │       │   ├── csb_master
+│           │       │       │   ├── csc
+│           │       │       │   ├── glb
+│           │       │       │   ├── nocif
+│           │       │       │   ├── pdp
+│           │       │       │   ├── retiming
+│           │       │       │   ├── rubik
+│           │       │       │   ├── sdp
+│           │       │       │   └── top
+│           │       │       ├── rams
+│           │       │       │   ├── fpga
+│           │       │       │   │   └── model
+│           │       │       │   ├── model
+│           │       │       │   └── synth
+│           │       │       └── vlibs
+│           │       └── small
+│           │           └── vmod
+│           │               ├── fifos
+│           │               ├── include
+│           │               ├── nvdla
+│           │               │   ├── apb2csb
+│           │               │   ├── bdma
+│           │               │   ├── cacc
+│           │               │   ├── car
+│           │               │   ├── cbuf
+│           │               │   ├── cdma
+│           │               │   ├── cdp
+│           │               │   ├── cfgrom
+│           │               │   ├── cmac
+│           │               │   ├── csb_master
+│           │               │   ├── csc
+│           │               │   ├── glb
+│           │               │   ├── nocif
+│           │               │   ├── pdp
+│           │               │   ├── retiming
+│           │               │   ├── rubik
+│           │               │   ├── sdp
+│           │               │   └── top
+│           │               ├── rams
+│           │               │   ├── fpga
+│           │               │   │   └── model
+│           │               │   ├── model
+│           │               │   └── synth
+│           │               └── vlibs
+│           └── scala
+│               ├── devices
+│               │   └── nvdla
+│               └── ip
+├── riscv-sodor
+│   ├── doc
+│   ├── project
+│   ├── riscv-bmarks
+│   ├── scripts
+│   ├── src
+│   │   └── main
+│   │       ├── resources
+│   │       │   └── vsrc
+│   │       └── scala
+│   │           ├── common
+│   │           ├── rv32_1stage
+│   │           ├── rv32_2stage
+│   │           ├── rv32_3stage
+│   │           ├── rv32_5stage
+│   │           └── rv32_ucode
+│   └── test
+│       ├── custom-bmarks
+│       ├── custom-tests
+│       └── env
+│           └── p
+├── rocket-chip
+│   ├── api-config-chipsalliance
+│   │   ├── build-rules
+│   │   │   ├── mill
+│   │   │   ├── sbt
+│   │   │   └── wake
+│   │   └── design
+│   │       └── craft
+│   │           └── src
+│   │               └── config
+│   ├── bootrom
+│   ├── docs
+│   │   └── src
+│   │       └── diplomacy
+│   │           └── diagrams
+│   ├── emulator
+│   ├── hardfloat
+│   │   ├── berkeley-softfloat-3
+│   │   │   ├── build
+│   │   │   │   ├── Linux-386-GCC
+│   │   │   │   ├── Linux-386-SSE2-GCC
+│   │   │   │   ├── Linux-ARM-VFPv2-GCC
+│   │   │   │   ├── Linux-x86_64-GCC
+│   │   │   │   ├── Win32-MinGW
+│   │   │   │   ├── Win32-SSE2-MinGW
+│   │   │   │   ├── Win64-MinGW-w64
+│   │   │   │   ├── template-FAST_INT64
+│   │   │   │   └── template-not-FAST_INT64
+│   │   │   ├── doc
+│   │   │   └── source
+│   │   │       ├── 8086
+│   │   │       ├── 8086-SSE
+│   │   │       ├── ARM-VFPv2
+│   │   │       ├── ARM-VFPv2-defaultNaN
+│   │   │       ├── RISCV
+│   │   │       └── include
+│   │   ├── berkeley-testfloat-3
+│   │   │   ├── build
+│   │   │   │   ├── Linux-386-GCC
+│   │   │   │   ├── Linux-386-SSE2-GCC
+│   │   │   │   ├── Linux-ARM-VFPv2-GCC
+│   │   │   │   ├── Linux-x86_64-GCC
+│   │   │   │   ├── Win32-MinGW
+│   │   │   │   ├── Win32-SSE2-MinGW
+│   │   │   │   ├── Win64-MinGW-w64
+│   │   │   │   └── template
+│   │   │   ├── doc
+│   │   │   └── source
+│   │   │       └── subj-C
+│   │   ├── doc
+│   │   ├── project
+│   │   └── src
+│   │       ├── main
+│   │       │   └── scala
+│   │       └── test
+│   │           ├── resources
+│   │           │   ├── csrc
+│   │           │   ├── includes
+│   │           │   └── vsrc
+│   │           └── scala
+│   ├── macros
+│   │   └── src
+│   │       └── main
+│   │           └── scala
+│   ├── project
+│   ├── regression
+│   ├── scripts
+│   │   └── debug_rom
+│   ├── src
+│   │   ├── main
+│   │   │   ├── resources
+│   │   │   │   ├── META-INF
+│   │   │   │   │   └── services
+│   │   │   │   ├── csrc
+│   │   │   │   └── vsrc
+│   │   │   └── scala
+│   │   │       ├── amba
+│   │   │       │   ├── ahb
+│   │   │       │   ├── apb
+│   │   │       │   ├── axi4
+│   │   │       │   └── axis
+│   │   │       ├── aop
+│   │   │       ├── aspects
+│   │   │       ├── devices
+│   │   │       │   ├── debug
+│   │   │       │   └── tilelink
+│   │   │       ├── diplomacy
+│   │   │       ├── diplomaticobjectmodel
+│   │   │       │   ├── logicaltree
+│   │   │       │   └── model
+│   │   │       ├── examples
+│   │   │       ├── formal
+│   │   │       ├── groundtest
+│   │   │       ├── interrupts
+│   │   │       ├── jtag
+│   │   │       ├── linting
+│   │   │       │   └── rule
+│   │   │       ├── prci
+│   │   │       ├── regmapper
+│   │   │       ├── rocket
+│   │   │       ├── scie
+│   │   │       ├── stage
+│   │   │       │   └── phases
+│   │   │       ├── subsystem
+│   │   │       ├── system
+│   │   │       ├── tile
+│   │   │       ├── tilelink
+│   │   │       ├── transforms
+│   │   │       │   └── naming
+│   │   │       ├── unittest
+│   │   │       └── util
+│   │   └── test
+│   │       └── scala
+│   │           ├── generatorTests
+│   │           ├── linting
+│   │           │   └── rule
+│   │           └── transforms
+│   │               └── naming
+│   ├── torture
+│   │   ├── config
+│   │   ├── env
+│   │   │   ├── p
+│   │   │   ├── pm
+│   │   │   ├── pt
+│   │   │   └── v
+│   │   ├── fileop
+│   │   │   └── src
+│   │   │       └── main
+│   │   │           └── scala
+│   │   ├── generator
+│   │   │   └── src
+│   │   │       └── main
+│   │   │           └── scala
+│   │   ├── output
+│   │   ├── overnight
+│   │   │   ├── lib
+│   │   │   └── src
+│   │   │       └── main
+│   │   │           └── scala
+│   │   ├── project
+│   │   └── testrun
+│   │       └── src
+│   │           └── main
+│   │               └── scala
+│   └── vsim
+├── sha3
+│   ├── config
+│   ├── software
+│   │   ├── jtr
+│   │   │   ├── buildroot-external
+│   │   │   │   └── package
+│   │   │   │       └── john
+│   │   │   └── overlay
+│   │   │       ├── etc
+│   │   │       │   └── init.d
+│   │   │       └── root
+│   │   │           └── sha3
+│   │   ├── linux
+│   │   ├── marshal-configs
+│   │   ├── test-reference
+│   │   │   ├── bare-rocc
+│   │   │   │   └── sha3-bare-rocc
+│   │   │   ├── bare-sw
+│   │   │   │   └── sha3-bare-sw
+│   │   │   ├── linux
+│   │   │   │   └── sha3-linux-test
+│   │   │   └── linux-jtr
+│   │   │       └── sha3-linux-jtr-test
+│   │   └── tests
+│   │       ├── bare
+│   │       ├── linux
+│   │       └── src
+│   └── src
+│       └── main
+│           ├── resources
+│           │   └── vsrc
+│           └── scala
+├── sifive-blocks
+│   ├── src
+│   │   └── main
+│   │       ├── resources
+│   │       └── scala
+│   │           ├── devices
+│   │           │   ├── chiplink
+│   │           │   ├── gpio
+│   │           │   ├── i2c
+│   │           │   ├── jtag
+│   │           │   ├── mockaon
+│   │           │   ├── msi
+│   │           │   ├── pinctrl
+│   │           │   ├── porgen
+│   │           │   ├── pwm
+│   │           │   ├── spi
+│   │           │   ├── stream
+│   │           │   ├── timer
+│   │           │   ├── uart
+│   │           │   └── wdt
+│   │           ├── ip
+│   │           │   └── xilinx
+│   │           │       └── ibufds_gte2
+│   │           └── util
+│   └── vsrc
+├── sifive-cache
+│   ├── build-rules
+│   │   └── wake
+│   └── design
+│       └── craft
+│           └── inclusivecache
+│               └── src
+├── testchipip
+│   ├── bootrom -> src/main/resources/testchipip/bootrom/
+│   ├── csrc -> src/main/resources/testchipip/csrc/
+│   ├── project
+│   ├── src
+│   │   └── main
+│   │       ├── resources
+│   │       │   ├── dramsim2_ini
+│   │       │   └── testchipip
+│   │       │       ├── bootrom
+│   │       │       ├── csrc
+│   │       │       ├── tlrom
+│   │       │       └── vsrc
+│   │       └── scala
+│   │           └── tsiHost
+│   └── vsrc -> src/main/resources/testchipip/vsrc/
+└── tracegen
+    └── src
+        └── main
+            └── scala
+
+941 directories

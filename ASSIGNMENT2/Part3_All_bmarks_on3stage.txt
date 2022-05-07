@@ -1,0 +1,44 @@
+root@c21295631886:~/chipyard/sims/verilator# make CONFIG=Sodor3StageConfig run-binary BINARY=/root/${BMARKS}/towers.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+mkdir -p /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor3StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard/generators/riscv-sodor/riscv-bmarks/towers.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/towers.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/towers.log)
+mcycle = 7414
+minstret = 6172
+root@c21295631886:~/chipyard/sims/verilator# make CONFIG=Sodor3StageConfig run-binary BINARY=/root/${BMARKS}/dhrystone.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor3StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard/generators/riscv-sodor/riscv-bmarks/dhrystone.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/dhrystone.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/dhrystone.log)
+Microseconds for one run through Dhrystone: 655
+Dhrystones per Second:                      1526
+mcycle = 327533
+minstret = 224530
+[UART] UART0 is here (stdin/stdout).
+root@c21295631886:~/chipyard/sims/verilator# make CONFIG=Sodor3StageConfig run-binary BINARY=/root/${BMARKS}/median.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor3StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard/generators/riscv-sodor/riscv-bmarks/median.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/median.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/median.log)
+mcycle = 7476
+minstret = 4155
+[UART] UART0 is here (stdin/stdout).
+root@c21295631886:~/chipyard/sims/verilator# make CONFIG=Sodor3StageConfig run-binary BINARY=/root/${BMARKS}/multiply.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor3StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard/generators/riscv-sodor/riscv-bmarks/multiply.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/multiply.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/multiply.log)
+mcycle = 39253
+minstret = 20902
+[UART] UART0 is here (stdin/stdout).
+root@c21295631886:~/chipyard/sims/verilator# make CONFIG=Sodor3StageConfig run-binary BINARY=/root/${BMARKS}/qsort.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor3StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard/generators/riscv-sodor/riscv-bmarks/qsort.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/qsort.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/qsort.log)
+mcycle = 195223
+minstret = 123509
+[UART] UART0 is here (stdin/stdout).
+root@c21295631886:~/chipyard/sims/verilator# make CONFIG=Sodor3StageConfig run-binary BINARY=/root/${BMARKS}/rsort.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor3StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard/generators/riscv-sodor/riscv-bmarks/rsort.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/rsort.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/rsort.log)
+mcycle = 190070
+minstret = 171134
+[UART] UART0 is here (stdin/stdout).
+root@c21295631886:~/chipyard/sims/verilator# make CONFIG=Sodor3StageConfig run-binary BINARY=/root/${BMARKS}/vvadd.riscv
+Running with RISCV=/root/chipyard/riscv-tools-install
+(set -o pipefail &&  /root/chipyard/sims/verilator/simulator-chipyard-Sodor3StageConfig +permissive +dramsim +dramsim_ini_dir=/root/chipyard/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /root/chipyard/generators/riscv-sodor/riscv-bmarks/vvadd.riscv </dev/null 2> >(spike-dasm > /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/vvadd.out) | tee /root/chipyard/sims/verilator/output/chipyard.TestHarness.Sodor3StageConfig/vvadd.log)
+mcycle = 3321
+minstret = 2418
+[UART] UART0 is here (stdin/stdout).
